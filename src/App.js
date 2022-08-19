@@ -1,18 +1,25 @@
-import { Link, Outlet } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
+import { CapsuleTabs } from "antd-mobile";
 import "./App.css";
 
 function App() {
+  let navigate = useNavigate();
+
+  const onChange = (key) => {
+    navigate(`/${key}`);
+  };
+
   return (
     <div className="App">
-      <h1>Hello Mobile H5</h1>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="/foo">Foo</Link> | <Link to="/bar">Bar</Link>
-      </nav>
+      <CapsuleTabs onChange={onChange}>
+        <CapsuleTabs.Tab title="foo" key="foo">
+          Foo
+        </CapsuleTabs.Tab>
+        <CapsuleTabs.Tab title="bar" key="bar">
+          Bar
+        </CapsuleTabs.Tab>
+      </CapsuleTabs>
+
       {/* something like a placeholder for nested route */}
       <Outlet />
     </div>
