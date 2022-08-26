@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { CapsuleTabs } from "antd-mobile";
 import Header from "../../components/AdminHeader";
@@ -8,6 +9,10 @@ function App() {
   const onChange = (key) => {
     navigate(`${key}`);
   };
+
+  useEffect(() => {
+    navigate("/admin/bar");
+  }, [navigate]);
 
   return (
     <>

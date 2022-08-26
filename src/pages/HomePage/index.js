@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { CapsuleTabs } from "antd-mobile";
 import Header from "../../components/ScreenHeader";
@@ -8,6 +9,10 @@ function Home() {
   const onChange = (key) => {
     navigate(`${key}`);
   };
+
+  useEffect(() => {
+    navigate("/foo");
+  }, [navigate]);
 
   return (
     <>
