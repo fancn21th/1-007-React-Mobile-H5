@@ -1,12 +1,20 @@
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
+import { SpinLoading } from "antd-mobile";
 
 import Home from "../Home";
-import Foo from "../Foo";
-import Bar from "../Bar";
+
+const Foo = lazy(() =>
+  import(/* webpackChunkName: "webpackChunkName_a" */ "../Foo")
+);
+
+const Bar = lazy(() =>
+  import(/* webpackChunkName: "webpackChunkName_b" */ "../Bar")
+);
 
 function App() {
   return (
-    <div className="App">
+    <Suspense fallback={<SpinLoading color="primary" />}>
       <Routes>
         {/* https://reactrouter.com/en/v6.3.0/getting-started/overview#nested-routes */}
         <Route path="/" element={<Home />}>
@@ -14,7 +22,7 @@ function App() {
           <Route path="bar" element={<Bar />} />
         </Route>
       </Routes>
-    </div>
+    </Suspense>
   );
 }
 
