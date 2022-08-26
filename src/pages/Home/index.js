@@ -1,6 +1,5 @@
 import { useNavigate, Outlet } from "react-router-dom";
 import { CapsuleTabs } from "antd-mobile";
-import "./App.css";
 
 function App() {
   let navigate = useNavigate();
@@ -10,7 +9,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <CapsuleTabs onChange={onChange}>
         <CapsuleTabs.Tab title="foo" key="foo">
           Foo
@@ -18,11 +17,10 @@ function App() {
         <CapsuleTabs.Tab title="bar" key="bar">
           Bar
         </CapsuleTabs.Tab>
-      </CapsuleTabs>
-
+      </CapsuleTabs>{" "}
       {/* something like a placeholder for nested route */}
       <Outlet />
-    </div>
+    </>
   );
 }
 
