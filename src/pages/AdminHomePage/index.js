@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     navigate("/admin/bar");
-  }, [navigate]);
+  }, []);
 
   return (
     <>
