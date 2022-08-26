@@ -6,19 +6,16 @@ function App() {
   let navigate = useNavigate();
 
   const onChange = (key) => {
-    navigate(`/admin/${key}`);
+    navigate(`${key}`);
   };
 
   return (
     <>
       <Header />
       <CapsuleTabs onChange={onChange}>
-        <CapsuleTabs.Tab title="bar" key="bar">
-          Bar
-        </CapsuleTabs.Tab>
-        <CapsuleTabs.Tab title="baz" key="baz">
-          Baz
-        </CapsuleTabs.Tab>
+        <CapsuleTabs.Tab title="bar" key="/admin/bar"></CapsuleTabs.Tab>
+        <CapsuleTabs.Tab title="baz" key="/admin/baz"></CapsuleTabs.Tab>
+        <CapsuleTabs.Tab title="screen" key="/"></CapsuleTabs.Tab>
       </CapsuleTabs>{" "}
       {/* something like a placeholder for nested route */}
       <Outlet />
