@@ -3,8 +3,6 @@ import { useSample } from "../../../../hooks";
 export default function Sample() {
   const { status, error, data, isFetching } = useSample();
 
-  console.log("data", data);
-
   return (
     <>
       {status === "loading" ? (
