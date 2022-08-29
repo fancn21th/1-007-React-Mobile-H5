@@ -21,7 +21,7 @@ function Home() {
         <CapsuleTabs.Tab title="foo" key="/foo"></CapsuleTabs.Tab>
         <CapsuleTabs.Tab title="foz" key="/foz"></CapsuleTabs.Tab>
         <CapsuleTabs.Tab title="admin" key="/admin"></CapsuleTabs.Tab>
-      </CapsuleTabs>{" "}
+      </CapsuleTabs>
       {/* something like a placeholder for nested route */}
       <Outlet />
     </>
