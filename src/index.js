@@ -1,24 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./index.css";
-import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import App from "./pages/App";
 import reportWebVitals from "./reportWebVitals";
-
-import Foo from "./pages/Foo";
-import Bar from "./pages/Bar";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        {/* nested routes */}
-        <Route path="/" element={<App />}>
-          <Route path="foo" element={<Foo />} />
-          <Route path="bar" element={<Bar />} />
-        </Route>
-      </Routes>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
