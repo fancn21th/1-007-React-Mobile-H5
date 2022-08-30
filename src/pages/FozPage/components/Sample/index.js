@@ -13,11 +13,11 @@ export default function Sample() {
         // `data` will either resolve to the latest page's data
         // or if fetching a new page, the last successful page's data
         <div>
-          <ur>
+          <ul>
             <li>{data.a}</li>
             <li>{data.b}</li>
             <li>{data.c}</li>
-          </ur>
+          </ul>
         </div>
       )}
       {
