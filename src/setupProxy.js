@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: process.env.REACT_APP_BASE_URL,
+      target: process.env.REACT_APP_PROXY_URL,
       changeOrigin: true,
       // it is really sad that i can not find the config
       // neither from 'https://create-react-app.dev/docs/proxying-api-requests-in-development#configuring-the-proxy-manually'
