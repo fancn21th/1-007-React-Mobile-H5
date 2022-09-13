@@ -1,7 +1,3 @@
-const initalData = {
-  a: 0,
-  b: "yes",
-  c: "no",
-};
+const initialData = {};
 
-export default initalData;
+export default initialData;

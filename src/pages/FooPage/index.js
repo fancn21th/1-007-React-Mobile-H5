@@ -1,29 +1,24 @@
-import { Grid } from "antd-mobile";
+import Block from "../../layouts/ResponsiveBlock";
 import Demo from "./components/Demo";
 
 export default function Foo() {
   return (
     <>
-      <Grid.Item>
-        <div>
-          <Demo />
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div>
-          <Demo />
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div>
-          <Demo />
-        </div>
-      </Grid.Item>
-      <Grid.Item>
-        <div>
-          <Demo />
-        </div>
-      </Grid.Item>
+      <Block>
+        <Demo />
+      </Block>
+      <Block tabletSpan={2}>
+        <Demo />
+      </Block>
+      <Block>
+        <Demo />
+      </Block>
+      <Block>
+        <Demo />
+      </Block>
+      <Block>
+        <Demo />
+      </Block>
     </>
   );
 }

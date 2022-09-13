@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
-import { Grid } from "antd-mobile";
 import Header from "../../components/ScreenHeader";
+import Container from "../../layouts/ResponsiveContainer";
 
 function Home() {
   return (
     <>
       <Header />
       {/* something like a placeholder for nested route */}
-      <Grid columns={3} gap={8}>
+      <Container>
         <Outlet />
-      </Grid>
+      </Container>
     </>
   );
 }
