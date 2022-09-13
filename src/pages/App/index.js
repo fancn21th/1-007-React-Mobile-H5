@@ -1,7 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { SpinLoading } from "antd-mobile";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { withResizeDetector } from "react-resize-detector";
+
+import { LayoutContext } from "../../contexts";
 
 import HomePage from "../HomePage";
 
@@ -25,13 +27,24 @@ const BazPage = lazy(() =>
   import(/* webpackChunkName: "webpackChunkName_b" */ "../BazPage")
 );
 
-// Create a client
-const queryClient = new QueryClient();
+// https://getbootstrap.com/docs/3.4/css/#grid
+const mobileSize = 768;
 
-function App() {
+function App({ width }) {
+  let isTablet = false;
+
+  if (width >= mobileSize) {
+    isTablet = true;
+  }
+
   return (
     <Suspense fallback={<SpinLoading color="primary" />}>
-      <QueryClientProvider client={queryClient}>
+      <LayoutContext.Provider
+        value={{
+          width,
+          isTablet,
+        }}
+      >
         <Routes>
           {/* https://reactrouter.com/en/v6.3.0/getting-started/overview#nested-routes */}
           <Route path="/" element={<HomePage />}>
@@ -43,9 +56,9 @@ function App() {
             <Route path="baz" element={<BazPage />} />
           </Route>
         </Routes>
-      </QueryClientProvider>
+      </LayoutContext.Provider>
     </Suspense>
   );
 }
 
-export default App;
+export default withResizeDetector(App);
