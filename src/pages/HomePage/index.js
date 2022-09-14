@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../../components/ScreenHeader";
 import Container from "../../layouts/ResponsiveContainer";
+import "./index.css";
 
 function Home() {
   return (

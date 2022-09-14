@@ -12,7 +12,7 @@ export default function Sample() {
       ) : (
         // `data` will either resolve to the latest page's data
         // or if fetching a new page, the last successful page's data
-        <div>{JSON.stringify(data)}</div>
+        <div>{JSON.stringify(data, null, 2)}</div>
       )}
       {
         // Since the last page's data potentially sticks around between page requests,

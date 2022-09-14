@@ -1,7 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import { SpinLoading } from "antd-mobile";
-import { withResizeDetector } from "react-resize-detector";
+import { withSize } from "react-sizeme";
 
 import { LayoutContext } from "../../contexts";
 
@@ -30,7 +30,7 @@ const BazPage = lazy(() =>
 // https://getbootstrap.com/docs/3.4/css/#grid
 const mobileSize = 768;
 
-function App({ width }) {
+function App({ size: { width } }) {
   let isTablet = false;
 
   if (width >= mobileSize) {
@@ -61,4 +61,4 @@ function App({ width }) {
   );
 }
 
-export default withResizeDetector(App);
+export default withSize()(App);
