@@ -5,6 +5,8 @@ import App from "./pages/App";
 import Providers from "./components/Providers";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
+import "../node_modules/react-grid-layout/css/styles.css";
+import "../node_modules/react-resizable/css/styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Header from "../../components/ScreenHeader";
-import Container from "../../layouts/ResponsiveContainer";
 import "./index.css";
 
 function Home() {
@@ -8,9 +7,7 @@ function Home() {
     <>
       <Header />
       {/* something like a placeholder for nested route */}
-      <Container>
-        <Outlet />
-      </Container>
+      <Outlet />
     </>
   );
 }
