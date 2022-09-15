@@ -20,17 +20,17 @@ const charts = [
     heightSpan: 2,
   },
   {
-    Type: Hello,
-    widthSpan: 1,
-    heightSpan: 2,
-  },
-  {
-    Type: Basic,
+    Type: PieWithLabel,
     widthSpan: 1,
     heightSpan: 1,
   },
   {
-    Type: PieWithLabel,
+    Type: Basic,
+    widthSpan: 1,
+    heightSpan: 2,
+  },
+  {
+    Type: Hello,
     widthSpan: 1,
     heightSpan: 1,
   },
