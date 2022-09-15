@@ -58,6 +58,9 @@ export default function ResponsiveContainer({ charts }) {
 
           const layouts = getLayouts(chartsWithKey);
 
+          const chartWidthOffset = 20,
+            chartHeightOffset = 20;
+
           console.log({
             width,
             columnWidth,
@@ -89,8 +92,8 @@ export default function ResponsiveContainer({ charts }) {
                 <div key={key}>
                   <Card>
                     <Type
-                      width={columnWidth * widthSpan}
-                      height={rowHeight * heightSpan}
+                      width={columnWidth * widthSpan - chartWidthOffset}
+                      height={rowHeight * heightSpan - chartHeightOffset}
                     />
                   </Card>
                 </div>
