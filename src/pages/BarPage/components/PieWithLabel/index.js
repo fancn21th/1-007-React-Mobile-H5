@@ -46,9 +46,14 @@ const data = [
   },
 ];
 
-export default function PieWithLabel() {
+export default function PieWithLabel({ width, height }) {
   return (
-    <Canvas pixelRatio={window.devicePixelRatio}>
+    <Canvas
+      pixelRatio={window.devicePixelRatio}
+      width={width}
+      height={height}
+      padding={10}
+    >
       <Chart
         data={data}
         coord={{

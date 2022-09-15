@@ -10,9 +10,9 @@ const data = [
   { genre: "Other", sold: 150 },
 ];
 
-export default function Basic() {
+export default function Basic({ width, height }) {
   return (
-    <Canvas pixelRatio={window.devicePixelRatio}>
+    <Canvas pixelRatio={window.devicePixelRatio} width={width} height={height}>
       <Chart data={data}>
         <Legend />
         <Axis field="genre" />

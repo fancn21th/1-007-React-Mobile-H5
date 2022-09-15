@@ -28,21 +28,32 @@ const BazPage = lazy(() =>
 );
 
 // https://getbootstrap.com/docs/3.4/css/#grid
-const mobileSize = 768;
+const mobileWidth = 768;
+const mobileColumnsSize = 4;
+const TabletColumnsSize = 12;
+const rowHeight = 300;
 
 function App({ size: { width } }) {
   let isTablet = false;
 
-  if (width >= mobileSize) {
+  if (width >= mobileWidth) {
     isTablet = true;
   }
 
+  const columnWidth = isTablet ? width / 3 : width;
+
   return (
     <Suspense fallback={<SpinLoading color="primary" />}>
+      {/* layout info context */}
       <LayoutContext.Provider
         value={{
           width,
           isTablet,
+          mobileColumnsSize,
+          TabletColumnsSize,
+          columnWidth,
+          rowHeight,
+          mobileWidth,
         }}
       >
         <Routes>
