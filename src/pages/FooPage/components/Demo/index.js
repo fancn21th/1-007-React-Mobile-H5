@@ -1,7 +1,5 @@
-import { useContext } from "react";
 import Canvas from "@antv/f2-react";
 import { Chart, Interval, Legend, Axis, Tooltip } from "@antv/f2";
-import { LayoutContext } from "../../../../contexts";
 
 // F2 对数据源格式的要求，仅仅是 JSON 数组，数组的每个元素是一个标准 JSON 对象。
 const data = [
@@ -12,11 +10,9 @@ const data = [
   { genre: "Other", sold: 150 },
 ];
 
-export default function Demo() {
-  const { width } = useContext(LayoutContext);
-
+export default function Demo({ width, height }) {
   return (
-    <Canvas pixelRatio={window.devicePixelRatio} width={width / 3}>
+    <Canvas pixelRatio={window.devicePixelRatio} width={width} height={height}>
       <Chart data={data}>
         <Legend />
         <Axis field="genre" />
