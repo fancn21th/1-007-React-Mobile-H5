@@ -11,24 +11,24 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const charts = [
   {
-    key: uuidv4(),
     Type: Basic,
     widthSpan: 1,
     heightSpan: 1,
   },
   {
-    key: uuidv4(),
     Type: PieWithLabel,
     widthSpan: 1,
     heightSpan: 1,
   },
   {
-    key: uuidv4(),
     Type: Basic,
     widthSpan: 1,
     heightSpan: 2,
   },
-];
+].map((chart) => ({
+  ...chart,
+  key: uuidv4(),
+}));
 
 const getLayouts = (charts) => {
   const tabletLayout = charts.map(
