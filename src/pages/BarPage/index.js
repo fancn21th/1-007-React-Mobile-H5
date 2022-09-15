@@ -88,8 +88,8 @@ class MyFirstGrid extends Component {
                   lg: TabletColumnsSize,
                   md: TabletColumnsSize,
                   sm: TabletColumnsSize,
-                  xs: TabletColumnsSize,
-                  xxs: TabletColumnsSize,
+                  xs: mobileColumnsSize,
+                  xxs: mobileColumnsSize,
                 }}
                 breakpoints={{
                   lg: 1200,
