@@ -1,31 +1,38 @@
-import Demo from "./components/Demo";
+import Hello from "../../components/Hello";
+import Basic from "../../components/Basic";
+import PieWithLabel from "../../components/PieWithLabel";
 import ResponsiveContainer from "../../layouts/ResponsiveContainer";
 
 const charts = [
   {
-    Type: Demo,
+    Type: Hello,
     widthSpan: 1,
     heightSpan: 1,
   },
   {
-    Type: Demo,
+    Type: Basic,
     widthSpan: 1,
     heightSpan: 1,
   },
   {
-    Type: Demo,
+    Type: PieWithLabel,
     widthSpan: 1,
     heightSpan: 2,
   },
   {
-    Type: Demo,
+    Type: Hello,
     widthSpan: 1,
     heightSpan: 2,
   },
   {
-    Type: Demo,
+    Type: Basic,
     widthSpan: 1,
-    heightSpan: 2,
+    heightSpan: 1,
+  },
+  {
+    Type: PieWithLabel,
+    widthSpan: 1,
+    heightSpan: 1,
   },
 ];
 

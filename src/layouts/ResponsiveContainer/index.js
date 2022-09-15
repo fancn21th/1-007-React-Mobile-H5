@@ -11,7 +11,7 @@ const getLayouts = (charts) => {
   const tabletLayout = charts.map(
     ({ key: i, widthSpan, heightSpan }, index) => ({
       i,
-      x: index * 4,
+      x: (index * 4) % 12,
       y: 0,
       w: widthSpan * 4,
       h: heightSpan,
@@ -21,7 +21,7 @@ const getLayouts = (charts) => {
   const mobileLayout = charts.map(
     ({ key: i, widthSpan, heightSpan }, index) => ({
       i,
-      x: index * 4,
+      x: (index * 4) % 4,
       y: 0,
       w: widthSpan * 4,
       h: heightSpan,
