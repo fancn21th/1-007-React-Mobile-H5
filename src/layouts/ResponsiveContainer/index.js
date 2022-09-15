@@ -50,53 +50,7 @@ export default function ResponsiveContainer({ charts }) {
           TabletColumnsSize,
           columnWidth,
         }) => {
-          // const tabletLayout = [
-          //   {
-          //     i: "a",
-          //     x: 0,
-          //     y: 0,
-          //     w: 4,
-          //     h: 1,
-          //   },
-          //   {
-          //     i: "b",
-          //     x: 4,
-          //     y: 0,
-          //     w: 4,
-          //     h: 1,
-          //   },
-          //   {
-          //     i: "c",
-          //     x: 8,
-          //     y: 0,
-          //     w: 4,
-          //     h: 2,
-          //   },
-          // ];
-          // const mobileLayout = [
-          //   {
-          //     i: "a",
-          //     x: 0,
-          //     y: 0,
-          //     w: 4,
-          //     h: 1,
-          //   },
-          //   {
-          //     i: "b",
-          //     x: 4,
-          //     y: 0,
-          //     w: 4,
-          //     h: 1,
-          //   },
-          //   {
-          //     i: "c",
-          //     x: 8,
-          //     y: 0,
-          //     w: 4,
-          //     h: 2,
-          //   },
-          // ];
-
+          // derived
           const chartsWithKey = charts.map((chart) => ({
             ...chart,
             key: uuidv4(),
@@ -131,21 +85,6 @@ export default function ResponsiveContainer({ charts }) {
               rowHeight={rowHeight}
               width={width}
             >
-              {/* <div key="a">
-            <Block>
-              <Basic width={columnWidth} height={rowHeight} />
-            </Block>
-          </div>
-          <div key="b">
-            <Block>
-              <PieWithLabel width={columnWidth} height={rowHeight} />
-            </Block>
-          </div>
-          <div key="c">
-            <Block>
-              <Basic width={columnWidth} height={rowHeight * 2} />
-            </Block>
-          </div> */}{" "}
               {chartsWithKey.map(({ key, Type, widthSpan, heightSpan }) => (
                 <div key={key}>
                   <Card>
