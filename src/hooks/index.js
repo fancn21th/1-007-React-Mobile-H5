@@ -1,1 +1,2 @@
-export { default as useSample } from "./useSample";
+export { default as useUsers } from "./useUsers";
+export { default as useUser } from "./useUser";

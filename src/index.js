@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import "../node_modules/react-grid-layout/css/styles.css";
 import "../node_modules/react-resizable/css/styles.css";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -15,6 +16,7 @@ root.render(
     <Providers>
       <BrowserRouter>
         <App />
+        <ReactQueryDevtools initialIsOpen={false} />
       </BrowserRouter>
     </Providers>
   </React.StrictMode>
