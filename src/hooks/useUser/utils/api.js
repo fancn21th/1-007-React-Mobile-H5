@@ -4,7 +4,7 @@ import { format1 } from "./format";
 const fetchUser = (id) => {
   console.log({ id });
   return new Promise((resolve, reject) => {
-    axiosInstance.get("/api/users").then((result) => {
+    axiosInstance.get(`/api/users?id=${id}`).then((result) => {
       console.log({
         result,
       });
