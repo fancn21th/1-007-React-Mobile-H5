@@ -5,8 +5,13 @@
 .responsiveContainerColumn-layout {
   border: 1px solid black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  row-gap: 0.5rem;
 }
 
 .responsiveContainerColumn-layout__column {
+}
+
+.responsiveContainerColumn-layout__card {
+  margin-top: 0.5rem;
 }

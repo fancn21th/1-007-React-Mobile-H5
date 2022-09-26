@@ -57,17 +57,18 @@ function TabletLayout({ children }) {
 }
 
 function Column({ children }) {
-  const { rowHeight: height, columnWidth: width } = useContext(LayoutContext);
+  const { rowHeight, columnWidth } = useContext(LayoutContext);
 
-  console.log({
-    width,
-  });
+  const chartWidthOffset = 40,
+    chartHeightOffset = 40,
+    width = columnWidth - chartWidthOffset,
+    height = rowHeight - chartHeightOffset;
 
   const childrenArray = Children.toArray(children).map((child) => {
     const key = uuidv4();
 
     return (
-      <Card key={key}>
+      <Card key={key} className="responsiveContainerColumn-layout__card">
         {cloneElement(child, {
           width,
           height,
