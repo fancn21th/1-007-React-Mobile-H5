@@ -1,7 +1,36 @@
-export default function Baz() {
+import Hello from "../../components/Hello";
+import Basic from "../../components/Basic";
+import PieWithLabel from "../../components/PieWithLabel";
+
+import ResponsiveContainerColumn, {
+  MobileLayout,
+  TabletLayout,
+  Column,
+} from "../../layouts/ResponsiveContainerColumn";
+
+export default function Bar() {
   return (
-    <main style={{ padding: "1rem 0" }}>
-      <h2>Baz</h2>
-    </main>
+    <ResponsiveContainerColumn>
+      <MobileLayout>
+        <Column>
+          <Hello />
+        </Column>
+      </MobileLayout>
+      <TabletLayout>
+        <Column>
+          <Hello />
+          <Basic />
+          <PieWithLabel />
+        </Column>
+        <Column>
+          <PieWithLabel />
+          <Basic />
+          <Hello />
+        </Column>
+        <Column>
+          <PieWithLabel />
+        </Column>
+      </TabletLayout>
+    </ResponsiveContainerColumn>
   );
 }

@@ -1,0 +1,12 @@
+.container {
+  background-color: #efefef;
+}
+
+.responsiveContainerColumn-layout {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.responsiveContainerColumn-layout__column {
+}
