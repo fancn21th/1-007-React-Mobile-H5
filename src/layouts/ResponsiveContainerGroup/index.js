@@ -8,6 +8,29 @@ import "./index.css";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
+/**
+ *  目前的响应式逻辑如下
+ *
+ *  widthSpan， heightSpan 设置指南
+ *      目前版本 同时设置了 移动端和 pad端的 占行数 和 占列数
+ *
+ *  列数设置
+ *
+ *      1. 移动端 一共4列
+ *            所以 widthSpan 为 1 就自动设置了 占 满4列
+ *      2. Pad端 一共12列
+ *            所以 widthSpan 为 1 就自动设置了 占 4列 也就是 1/3
+ *
+ *  行数设置
+ *
+ *      全局给定 rowHeight
+ *
+ *      1. 移动端 和 Pad 端在高度 配置一致
+ *
+ *        实际高度 height = heightSpan * rowHeight
+ *
+ * */
+
 const getLayouts = (charts) => {
   const tabletLayout = charts.map(
     ({ key: i, widthSpan, heightSpan }, index) => ({
